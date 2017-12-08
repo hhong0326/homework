@@ -6,11 +6,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>수강-신청확인</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/table.css">
+
 </head>
 <body>
-	${course.title } 이/가 수강 신청되었습니다. <br>
+	<h2>${course.title } 이/가 수강 신청되었습니다. </h2><br/>
 	
 	<a href = "${pageContext.request.contextPath}/lookup"> 신청한 교과목 보러 가기 </a>
+	<br/><br/>
 	<a href="${pageContext.request.contextPath}">돌아가기</a>
 
 </body>

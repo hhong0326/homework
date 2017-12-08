@@ -40,7 +40,7 @@
 							<option value="" disabled selected>선택</option>
 							<option value="교필">교필</option>
 							<option value="핵교">핵교</option>
-							<option value="일반">일반</option>
+							<option value="일교">일교</option>
 							<option value="전선">전선</option>
 							<option value="전지">전지</option>
 							<option value="전기">전기</option>

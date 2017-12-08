@@ -4,6 +4,22 @@ body {
     font-weight: bold;
     font-size: 14px;
 }
+input[type=text]{
+	width:300px;
+	border-width:1px;
+	padding:2px;
+}
+input[type=password]{
+	width:300px;
+	border-width:1px;
+	padding:2px;
+}
+input[type=password]:focus{
+	background-color:#ff8080;
+}
+input[type=text]:focus {
+	background-color:#ff8080;
+}
 input[type=submit]{
 	display:block;
 	background-color:white;

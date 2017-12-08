@@ -7,9 +7,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>수강-로그인</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/table.css">
 </head>
 <body onload='document.f.username.focus();'>
-	<h3>아이디와 비밀번호를 입력해주세요</h3>
+	<h2>아이디와 비밀번호를 입력해주세요</h2>
 	
 	<c:if test="${not empty logoutMsg }">
 			<div style = "color:#0000ff"><h3>${logoutMsg}</h3></div>
@@ -19,7 +21,7 @@
 		<c:if test="${not empty errorMsg }">
 			<div style = "color:#ff0000"><h3>${errorMsg}</h3></div>
 		</c:if>
-		<table>
+		<table class = "tt">
 			<tr>
 				<td>User:</td>
 				<td><input type='text' name='username' value=''></td>

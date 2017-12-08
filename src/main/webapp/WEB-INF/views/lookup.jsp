@@ -10,20 +10,10 @@
 <title>수강-신청조회</title>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/table.css">
-<script>
-	function delete_click(c, t) {
-		alert(t + "이/가 취소 되었습니다.");
-		document.from.action = ${pageContext.request.contextPath}+ "/dodelete?code="+c;
-		document.formName.submit();
-		document.location.href = "${pageContext.request.contextPath}/lookup";
-		
-	}
-</script>
+
 </head>
 <body>
 	<h1>2018년도 1학기 수강 신청 내역</h1>
-	<sf:form method="POST"
-		modelAttribute="course">
 		<table class="tt">
 			<tr>
 				<th>코드</th>
@@ -38,12 +28,10 @@
 					<td><c:out value="${course.title}" /></td>
 					<td><c:out value="${course.division}" /></td>
 					<td><c:out value="${course.grades}" /></td>
-					<td><button id="delete"
-							onClick="delete_click('${course.code}', '${course.title}');">취소</button></td>
+					<td><a href="${pageContext.request.contextPath}/dodelete?code=${course.code}" onClick="alert('${course.title} 이/가 취소 되었습니다.');">취소</a></td>
 				</tr>
 			</c:forEach>
 		</table>
-	</sf:form>
 	<a href="${pageContext.request.contextPath}">돌아가기</a>
 </body>
 </html>

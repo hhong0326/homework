@@ -50,13 +50,16 @@ public class CourseController {
 	public String showRegister(Model model) {
 		List<Course> courses = cs.getCurrent();
 		model.addAttribute("courses", courses);
-		
 		return "lookup";
 	}
 	
 	@RequestMapping("/dodelete")
 	public String doDelete(Model model, @RequestParam(value = "code") String code) {
 		cs.delete(code);
+		
+		List<Course> courses = cs.getCurrent();
+		model.addAttribute("courses", courses);
+		
 		return "lookup";
 	}
 
