@@ -1,0 +1,46 @@
+@charset "UTF-8";
+body {
+   font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+input[type=submit]{
+	display:block;
+	background-color:white;
+	font-weight: bold;
+	width:50%;
+	margin:0 auto;
+}
+input[type=submit]:hover {
+    background-color: #ff8080;
+    font-weight:bold;
+    color:white;
+}
+table.tt {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+    border:1px solid black;
+}
+table.tt th {
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #ce4869;
+}
+table.tt td {
+    width: 200px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+.error{
+	font-size:small;
+	color:red;
+	margin-left:10px;
+}

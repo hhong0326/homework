@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>수강-구분별학점</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/table.css">
+
+</head>
+<body>
+<h1>이수 구분 별 학점 내역</h1>
+	<table class="tt">
+		<tr>
+			<th>교필</th>
+			<th>일교</th>
+			<th>전기</th>
+			<th>전선</th>
+			<th>전지</th>
+			<th>핵교</th>
+			<th>총학점</th>
+		</tr>
+		<tr>
+			<c:set var="num" value="0" />
+			<c:forEach var="course" items="${diviCourses}">
+				<td><c:out value="${course.grades}"></c:out></td>
+				<c:set var="sum" value="${sum + course.grades}" />
+			</c:forEach>
+			<td><c:out value="${sum}"></c:out></td>
+
+		</tr>
+	</table>
+	<a href="${pageContext.request.contextPath}">돌아가기</a>
+</body>
+</html>

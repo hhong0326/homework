@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.formtable{
+	border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+	width:400px;
+	border:1px solid black;
+	color: black;
+    background: #eee;
+}
+.label{
+	text-align:right;
+	vertical-align:top;
+}
+.control{
+	margin-left:10px; 
+}
+.error{
+	font-size:small;
+	color:red;
+	margin-left:10px;
+}
+
+textarea{
+	width:300px;
+	height:100px;
+}
+input[type=text]{
+	width:300px;
+	border-width:1px;
+	padding:2px;
+}
+input[type=text]:focus {
+	background-color:#ff8080;
+}
+input[type=submit]{
+	display:block;
+	background-color:white;
+	width:50%;
+	margin:0 auto;
+}
+input[type=submit]:hover {
+    background-color: #ce4869;
+    font-weight:bold;
+    color:white;
+}
